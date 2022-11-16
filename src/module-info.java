@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author fabie
+ *
+ */
+module Tamagochi {
+}
