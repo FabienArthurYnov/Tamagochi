@@ -7,12 +7,12 @@ import java.util.Scanner;
 public class Utilitaires {
 
 	
-	public String askString() {
+	public static String askString() {
 		Scanner sc = new Scanner(System.in);
 		return sc.nextLine();
 	}
 	
-	public int askInt() {
+	public static int askInt() {
 		Scanner sc = new Scanner(System.in);
 		try {
 			return sc.nextInt();
@@ -22,7 +22,7 @@ public class Utilitaires {
 		}
 	}
 	
-	public int randomInt(int min, int max) {
+	public static int randomInt(int min, int max) {
 		Random rn = new Random();
 		return rn.nextInt(max-min+1) + min;
 	}
