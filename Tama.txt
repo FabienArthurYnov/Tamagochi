@@ -1,0 +1,8 @@
+Nom:test2
+Energy:test2
+Force:test2
+Joie:test2
+Faim:test2
+Fatigue:test2
+Proprete:test2
+MalusForce:test2

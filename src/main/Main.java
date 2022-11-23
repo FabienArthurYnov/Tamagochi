@@ -24,6 +24,9 @@ public class Main {
 				menuOn = false;
 				break;
 			case 2:
+				System.out.println("Quel sera son nom ?");
+				String nom = Utilitaires.askString();
+				player = new Tama(nom, 10, 10, 10, 0, 0, 10, 0, 0);
 				System.out.println("Tamamon créé !");
 				menuOn = false;
 				break;

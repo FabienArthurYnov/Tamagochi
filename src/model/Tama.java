@@ -1,5 +1,7 @@
 package model;
 
+import utilitaires.SaveAndLoad;
+
 public class Tama {
 	private String nom;
 	private int energy;
@@ -9,10 +11,10 @@ public class Tama {
 	private int fatigue;
 	private int proprete;
 	private int malusforce;
-	private int nbrvictoire;
+	private int nbDeVictoire;
 	
 	public Tama(String nom, int energy, int force, int joie, int faim, int fatigue, int proprete, int malusforce,
-			int nbrvictoire) {
+			int nbDeVictoire) {
 		super();
 		this.nom = nom;
 		this.energy = energy;
@@ -22,7 +24,7 @@ public class Tama {
 		this.fatigue = fatigue;
 		this.proprete = proprete;
 		this.malusforce = malusforce;
-		this.nbrvictoire = nbrvictoire;
+		this.nbDeVictoire = nbDeVictoire;
 	}
 	
 	
@@ -30,6 +32,9 @@ public class Tama {
 		boolean gameOn = true;
 		while (gameOn) {
 			// TODO Matt, créé la partie un et les stats qui évoluent avec des tours, l'affichage
+			
+			// pour save ;
+			SaveAndLoad.saveTamaPlayer(this);
 			
 			gameOn = false;
 		}
@@ -100,10 +105,10 @@ public class Tama {
 	public void setMalusforce(int malusforce) {
 		this.malusforce = malusforce;
 	}
-	public int getNbrvictoire() {
-		return nbrvictoire;
+	public int getNbDeVictoire() {
+		return nbDeVictoire;
 	}
-	public void setNbrvictoire(int nbrvictoire) {
-		this.nbrvictoire = nbrvictoire;
+	public void setNbDeVictoire(int nbDeVictoire) {
+		this.nbDeVictoire = nbDeVictoire;
 	}
 }
