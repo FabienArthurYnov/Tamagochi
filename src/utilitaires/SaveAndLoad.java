@@ -24,7 +24,7 @@ public class SaveAndLoad {
 		to_save += "NbDeVictoire:" + player.getNbDeVictoire() + "\n";
 		to_save += "NbDeTour:" + player.getNbDeTour() + "\n";
 		try {
-			BufferedWriter b = new BufferedWriter(new FileWriter("src/Tamas/"+player.getNom()+".txt"));
+			BufferedWriter b = new BufferedWriter(new FileWriter("src/Tamamons/"+player.getNom()+".txt"));
 			b.write(to_save);
 			b.close();
 			System.out.println(player.getNom() +" sauvegardé !");
@@ -37,13 +37,13 @@ public class SaveAndLoad {
 	public static Tama loadTama() {
 		Tama player = new Tama("Username", 10, 10, 10, 0, 0, 10, 0, 0);
 		
-		System.out.println("Quel est son nom ?");
+		System.out.println("Quel est le nom du Tamamon ?");
 		String nom = Utilitaires.askString();
 		
 		
 		
 		try {
-			BufferedReader b = new BufferedReader(new FileReader("src/Tamas/"+nom+".txt"));
+			BufferedReader b = new BufferedReader(new FileReader("src/Tamamons/"+nom+".txt"));
 			String currentLine = b.readLine();
 			player.setNom(currentLine.split(":")[1]);
 			currentLine = b.readLine();
@@ -71,7 +71,7 @@ public class SaveAndLoad {
 			System.out.println("Il n'existe pas de Tamamon à ce nom ! Un nouveau Tama viens d'être créé.");
 			player = new Tama(nom, 10, 10, 10, 0, 0, 10, 0, 0);
 		} catch (IOException e) {
-			System.out.println("Le Tamamon n'est pas complet. (Peut-être manque-t-il son nombre de victoire et de tour ?");
+			System.out.println("Le Tamamon n'est pas complet ou n'as pas un format valide. (Peut-être manque-t-il son nombre de victoire et de tour ?");
 		}
 
 		return player;
