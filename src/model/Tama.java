@@ -1,5 +1,6 @@
 package model;
 
+import fight.MenuFight;
 import utilitaires.SaveAndLoad;
 
 public class Tama {
@@ -12,6 +13,7 @@ public class Tama {
 	private int proprete;
 	private int malusforce;
 	private int nbDeVictoire;
+	private int nbDeTour;
 	
 	public Tama(String nom, int energy, int force, int joie, int faim, int fatigue, int proprete, int malusforce,
 			int nbDeVictoire) {
@@ -25,6 +27,7 @@ public class Tama {
 		this.proprete = proprete;
 		this.malusforce = malusforce;
 		this.nbDeVictoire = nbDeVictoire;
+		this.setNbDeTour(0);
 	}
 	
 	
@@ -34,7 +37,10 @@ public class Tama {
 			// TODO Matt, créé la partie un et les stats qui évoluent avec des tours, l'affichage
 			
 			// pour save ;
-			SaveAndLoad.saveTamaPlayer(this);
+			SaveAndLoad.saveTama(this);
+			
+			// pour lancer les combats ;
+			MenuFight.menuFight(this);
 			
 			gameOn = false;
 		}
@@ -110,5 +116,15 @@ public class Tama {
 	}
 	public void setNbDeVictoire(int nbDeVictoire) {
 		this.nbDeVictoire = nbDeVictoire;
+	}
+
+
+	public int getNbDeTour() {
+		return nbDeTour;
+	}
+
+
+	public void setNbDeTour(int nbDeTour) {
+		this.nbDeTour = nbDeTour;
 	}
 }

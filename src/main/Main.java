@@ -19,8 +19,7 @@ public class Main {
 			int input = Utilitaires.askInt();
 			switch (input) {
 			case 1:
-				player = SaveAndLoad.loadTamaPlayer();
-				System.out.println("Tamamon chargé !");
+				player = SaveAndLoad.loadTama();
 				menuOn = false;
 				break;
 			case 2:

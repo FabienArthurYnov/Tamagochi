@@ -7,3 +7,4 @@ Fatigue:0
 Proprete:10
 MalusForce:0
 NbDeVictoire:0
+NbDeTour:1

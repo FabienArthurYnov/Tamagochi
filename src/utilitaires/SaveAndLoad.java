@@ -11,7 +11,7 @@ import model.Tama;
 
 public class SaveAndLoad {
 
-	public static void saveTamaPlayer(Tama player) {
+	public static void saveTama(Tama player) {
 		String to_save = "";
 		to_save += "Nom:" + player.getNom() + "\n";
 		to_save += "Energy:" + player.getEnergy() + "\n";
@@ -22,21 +22,28 @@ public class SaveAndLoad {
 		to_save += "Proprete:" + player.getProprete() + "\n";
 		to_save += "MalusForce:" + player.getMalusforce() + "\n";
 		to_save += "NbDeVictoire:" + player.getNbDeVictoire() + "\n";
+		to_save += "NbDeTour:" + player.getNbDeTour() + "\n";
 		try {
-			BufferedWriter b = new BufferedWriter(new FileWriter("src/Tama/Joueur/Tama.txt"));
+			BufferedWriter b = new BufferedWriter(new FileWriter("src/Tamas/"+player.getNom()+".txt"));
 			b.write(to_save);
 			b.close();
+			System.out.println(player.getNom() +" sauvegardé !");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
 
 	
-	public static Tama loadTamaPlayer() {
+	public static Tama loadTama() {
 		Tama player = new Tama("Username", 10, 10, 10, 0, 0, 10, 0, 0);
 		
+		System.out.println("Quel est son nom ?");
+		String nom = Utilitaires.askString();
+		
+		
+		
 		try {
-			BufferedReader b = new BufferedReader(new FileReader("src/Tama/Joueur/Tama.txt"));
+			BufferedReader b = new BufferedReader(new FileReader("src/Tamas/"+nom+".txt"));
 			String currentLine = b.readLine();
 			player.setNom(currentLine.split(":")[1]);
 			currentLine = b.readLine();
@@ -55,19 +62,18 @@ public class SaveAndLoad {
 			player.setMalusforce(Integer.parseInt(currentLine.split(":")[1]));
 			currentLine = b.readLine();
 			player.setNbDeVictoire(Integer.parseInt(currentLine.split(":")[1]));
+			currentLine = b.readLine();
+			player.setNbDeTour(Integer.parseInt(currentLine.split(":")[1]));
+
+			System.out.println("Tamamon chargé !");
 			
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			System.out.println("Il n'existe pas de Tamamon à ce nom ! Un nouveau Tama viens d'être créé.");
+			player = new Tama(nom, 10, 10, 10, 0, 0, 10, 0, 0);
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println("Le Tamamon n'est pas complet. (Peut-être manque-t-il son nombre de victoire et de tour ?");
 		}
 
 		return player;
-	}
-
-	public static Tama loadTamaEnemy() {
-		// TODO
-
-		return null;
 	}
 }
