@@ -34,7 +34,7 @@ public class MenuFight {
 			System.out.println(player.getNom()+" a gagné !");
 			SaveAndLoad.saveTama(player);
 		} else {
-			enemy.setNbDeTour(enemy.getNbDeTour()+1);
+			enemy.setNbDeVictoire(enemy.getNbDeVictoire()+1);
 			System.out.println(enemy.getNom()+" a gagné !");
 			enemy.setNbDeVictoire(enemy.getNbDeVictoire()+1);
 			if (enemy.getNom() != "Tamamon sauvage"); {
