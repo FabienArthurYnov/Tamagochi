@@ -1,0 +1,10 @@
+Nom:Fafa
+Energy:2
+Force:0
+Joie:9
+Faim:4
+Fatigue:7
+Proprete:8
+MalusForce:0
+NbDeVictoire:1
+NbDeTour:9
