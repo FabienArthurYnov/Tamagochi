@@ -1,10 +1,10 @@
 Nom:Test
-Energy:10
-Force:10
+Energy:9
+Force:1
 Joie:10
-Faim:0
-Fatigue:0
-Proprete:10
-MalusForce:0
+Faim:5
+Fatigue:9
+Proprete:6
+MalusForce:1
 NbDeVictoire:4
-NbDeTour:0
+NbDeTour:17
