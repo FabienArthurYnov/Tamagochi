@@ -3,7 +3,7 @@ Novembre 2022.
 
 Membres :
 Fabien ARTHUR	fabien.arthur@ynov.com
-Matthieu DENIEUL	[matt a pas mis son email]
+Matthieu DENIEUL matthieu.denieullediraison@ynov.com
 
 
 Nous séparons le travail en deux, mettant en commun grâce à Github. 
