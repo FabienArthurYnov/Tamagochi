@@ -17,6 +17,8 @@ chargement, qu'il soit natif ou importé.
 
 
 
-Matthieu ;
+Matthieu ; Etant moins à l'aise que Fabien, j'ai travaillé sur la partie 1. Je me suis focaliser sur le menu ainsi que ce qui s'en suit
+J'ai egalement fait la variable random et me suis occupé du tour par tour. Enfin pour terminer je me suis ensuite occupé des
+differents etats du Tomamon. Une fois cela terminer Fabien et moi avont procédé au troubleshooting de notre code.
 []
 
